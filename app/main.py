@@ -25,8 +25,15 @@ if os.path.exists(static_dir):
 
 @app.on_event("startup")
 def startup():
+    import shutil
+    from app.config import DB_PATH
+    src = os.path.join(os.path.dirname(os.path.abspath(__file__)), "questoes.db")
+    if os.path.exists(src) and os.path.getsize(src) > 100000:
+        if not os.path.exists(DB_PATH) or os.path.getsize(DB_PATH) < 100000:
+            shutil.copy2(src, DB_PATH)
+            print("Banco copiado!")
     init_db()
-    print("✅ OmegaPrep API iniciada!")
+    print("OmegaPrep API iniciada!")
 
 @app.get("/")
 def root():
