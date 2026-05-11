@@ -111,7 +111,29 @@ Valor com unidade correta na forma mais elegante.
 
 Dica estratégica para a prova de {escola}.
 
-REGRAS: LaTeX em toda expressão. Português impecável. Tom profissional.""",
+REGRAS: LaTeX em toda expressão. Português impecável. Tom profissional.
+
+INSTRUÇÃO PARA DIAGRAMAS:
+Quando um diagrama, figura geométrica, gráfico ou desenho ajudar na resolução, gere um SVG simples inline usando esta sintaxe exata:
+
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- seu diagrama aqui -->
+</svg>
+
+Use SVG para:
+- Triângulos, circunferências, polígonos em geometria
+- Diagramas de corpo livre em física (vetores de força)
+- Gráficos de funções simples
+- Circuitos elétricos básicos
+- Diagramas de energia
+
+Regras do SVG:
+- Sempre inclua xmlns="http://www.w3.org/2000/svg"
+- Use cores simples: stroke="#1a1a2e" fill="none" ou fill="#E1F5EE"
+- Adicione texto com <text> para rotular pontos e grandezas
+- Mantenha simples e legível
+- Coloque o SVG dentro da seção de resolução onde fizer mais sentido
+""",
 
         "quimica": f"""Você é professor doutor de Química para {escola}.
 
